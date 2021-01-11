@@ -8,12 +8,13 @@
 
     <TextView
         android:id="@+id/result_view"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="24dp"
         android:text="0"
         android:textAlignment="viewEnd"
         android:textSize="24dp"
+        android:textColor="@color/button_text"
         app:layout_constraintBottom_toTopOf="@+id/keyboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,29 +41,40 @@
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="CE" />
+                android:background="@drawable/button_shape"
+                android:text="CE"
+                android:textSize="24dp"
+                android:textColor="@color/button_text" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/brackets_right"
                 android:layout_width="50dp"
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="(" />
+                android:background="@drawable/button_shape"
+                android:text="+/-"
+                android:textColor="@color/button_text"
+                android:textSize="24dp" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/button_percent"
                 android:layout_width="50dp"
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text=")" />
+                android:background="@drawable/button_shape"
+                android:src="@drawable/ic_percent" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/button_divide"
                 android:layout_width="50dp"
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="/" />
+                android:background="@drawable/button_shape"
+                android:src="@drawable/ic_divide"
+                android:textSize="24dp" />
 
         </LinearLayout>
 
@@ -78,7 +90,9 @@
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="1" />
+                android:background="@drawable/button_shape"
+                android:text="1"
+                android:textSize="24dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_two"
@@ -86,7 +100,9 @@
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="2" />
+                android:background="@drawable/button_shape"
+                android:text="2"
+                android:textSize="24dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_three"
@@ -94,15 +110,19 @@
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="3" />
+                android:background="@drawable/button_shape"
+                android:text="3"
+                android:textSize="24dp" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/button_add"
                 android:layout_width="50dp"
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="+" />
+                android:background="@drawable/button_shape"
+                android:src="@drawable/ic_add_24px"
+                android:textSize="24dp" />
 
         </LinearLayout>
 
@@ -118,7 +138,9 @@
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="4" />
+                android:background="@drawable/button_shape"
+                android:text="4"
+                android:textSize="24dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_five"
@@ -126,7 +148,9 @@
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="5" />
+                android:background="@drawable/button_shape"
+                android:text="5"
+                android:textSize="24dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_six"
@@ -134,15 +158,18 @@
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="6" />
+                android:background="@drawable/button_shape"
+                android:text="6"
+                android:textSize="24dp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_reduce"
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/button_subtract"
                 android:layout_width="50dp"
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="-"
+                android:background="@drawable/button_shape"
+                android:src="@drawable/ic_subtract_24px"
                 android:textSize="24dp" />
         </LinearLayout>
 
@@ -158,7 +185,9 @@
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="7" />
+                android:background="@drawable/button_shape"
+                android:text="7"
+                android:textSize="24dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_eight"
@@ -166,7 +195,9 @@
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="8" />
+                android:background="@drawable/button_shape"
+                android:text="8"
+                android:textSize="24dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_nine"
@@ -174,15 +205,19 @@
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="9" />
+                android:background="@drawable/button_shape"
+                android:text="9"
+                android:textSize="24dp" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/button_multiply"
                 android:layout_width="50dp"
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="X" />
+                android:background="@drawable/button_shape"
+                android:src="@drawable/ic_multiply_24px"
+                android:textSize="24dp" />
 
         </LinearLayout>
 
@@ -198,7 +233,9 @@
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="0" />
+                android:background="@drawable/button_shape"
+                android:text="0"
+                android:textSize="24dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_dot"
@@ -206,8 +243,18 @@
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
+                android:background="@drawable/button_shape"
                 android:text="."
                 android:textSize="24dp" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/button_backspace"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_shape"
+                android:src="@drawable/ic_backspace_24px" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_equal"
@@ -215,7 +262,10 @@
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="=" />
+                android:background="@drawable/button_shape"
+                android:text="="
+                android:textColor="@color/button_text"
+                android:textSize="24dp" />
 
         </LinearLayout>
 
