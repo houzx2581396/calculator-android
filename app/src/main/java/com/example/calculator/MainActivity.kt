@@ -1,8 +1,10 @@
 package com.example.calculator
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.AppCompatButton
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -16,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         result_view.text = "0"
-
         addInt()
     }
 
@@ -55,23 +56,28 @@ class MainActivity : AppCompatActivity() {
         button_dot.setOnClickListener {
             showInt(".")
         }
-
-        button_backspace.setOnClickListener {
-            digit_on_screen.deleteCharAt(digit_on_screen.length - 1)
-            result_view.text = digit_on_screen.toString()
+        button_negative.setOnClickListener {
+            val negative = digit_on_screen.toString()
+            result_view.text = "-$negative"
+            digit_on_screen.clear()
+            digit_on_screen.append("-$negative")
         }
 
+        button_percent.setOnClickListener {
+            val percent = digit_on_screen.toString().toDouble() * 0.01
+            result_view.text = percent.toString()
+            digit_on_screen.clear()
+            digit_on_screen.append(percent.toString())
+        }
 
         //清除按鈕
         button_clear.setOnClickListener {
             result_view.text = "0"
             digit_on_screen.clear()
         }
-        button_percent.setOnClickListener {
-            val percent = digit_on_screen.toString().toDouble() * 0.01
-            result_view.text = percent.toString()
-            digit_on_screen.clear()
-            digit_on_screen.append(percent.toString())
+        button_backspace.setOnClickListener {
+            digit_on_screen.deleteCharAt(digit_on_screen.length - 1)
+            result_view.text = digit_on_screen.toString()
         }
 
         //算法按鈕

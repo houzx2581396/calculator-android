@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,8 +14,8 @@
         android:padding="24dp"
         android:text="0"
         android:textAlignment="viewEnd"
-        android:textSize="24dp"
-        android:textColor="@color/button_text"
+        android:textColor="@color/btn_text"
+        android:textSize="36dp"
         app:layout_constraintBottom_toTopOf="@+id/keyboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,19 +43,18 @@
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_shape"
-                android:text="CE"
-                android:textSize="24dp"
-                android:textColor="@color/button_text" />
+                android:text="C"
+                android:textSize="24dp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/brackets_right"
+                android:id="@+id/button_negative"
                 android:layout_width="50dp"
                 android:layout_height="80dp"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_shape"
                 android:text="+/-"
-                android:textColor="@color/button_text"
+                android:textColor="@color/btn_marks"
                 android:textSize="24dp" />
 
             <androidx.appcompat.widget.AppCompatImageButton
@@ -234,6 +234,7 @@
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_shape"
+                android:elevation="15dp"
                 android:text="0"
                 android:textSize="24dp" />
 
@@ -244,6 +245,7 @@
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_shape"
+                android:elevation="15dp"
                 android:text="."
                 android:textSize="24dp" />
 
@@ -254,6 +256,7 @@
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_shape"
+                android:elevation="15dp"
                 android:src="@drawable/ic_backspace_24px" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -263,8 +266,9 @@
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_shape"
+                android:elevation="15dp"
                 android:text="="
-                android:textColor="@color/button_text"
+                android:textColor="@color/btn_marks"
                 android:textSize="24dp" />
 
         </LinearLayout>
