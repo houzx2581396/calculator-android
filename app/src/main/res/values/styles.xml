@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ActionButtonStyle">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/btn_action</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:elevation">15dp</item>
+        <item name="android:background">@drawable/button_shape</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="NumberButtonStyle">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/btn_number</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:shadowColor">@color/result_text</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowRadius">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:background">@color/btn_background</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+</resources>
