@@ -1,6 +1,9 @@
 package com.example.calculator
 
 import android.content.Context
+import android.content.res.Configuration
+import android.graphics.Color
+import android.graphics.Paint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -57,10 +60,13 @@ class MainActivity : AppCompatActivity() {
             showInt(".")
         }
         button_negative.setOnClickListener {
-            val negative = digit_on_screen.toString()
-            result_view.text = "-$negative"
-            digit_on_screen.clear()
-            digit_on_screen.append("-$negative")
+            val showNum = digit_on_screen.toString()
+            if (showNum.toInt() != 0) {
+                val negativeNum = showNum.toInt().unaryMinus().toString()
+                result_view.text = negativeNum
+                digit_on_screen.clear()
+                digit_on_screen.append(negativeNum)
+            }
         }
 
         button_percent.setOnClickListener {
@@ -116,21 +122,26 @@ class MainActivity : AppCompatActivity() {
         digit_on_screen.clear()
         when (operation) {
             "add" -> {
-                val equal = CalculatorHelper.add(leftHandSide, rightHandSide)
+                val equal = leftHandSide.plus(rightHandSide)
                 result_view.text = equal.toString()
             }
             "multiply" -> {
-                val equal = CalculatorHelper.multiply(leftHandSide, rightHandSide)
+                val equal = leftHandSide.times(rightHandSide)
                 result_view.text = equal.toString()
             }
             "divide" -> {
-                val equal = CalculatorHelper.divide(leftHandSide, rightHandSide)
+                val equal = leftHandSide.div(rightHandSide)
                 result_view.text = equal.toString()
             }
             "subtract" -> {
-                val equal = CalculatorHelper.subtract(leftHandSide, rightHandSide)
+                val equal = leftHandSide.minus(rightHandSide)
                 result_view.text = equal.toString()
             }
         }
+    }
+
+    fun isDarkTheme(context: Context): Boolean {
+        val flag = context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        return flag == Configuration.UI_MODE_NIGHT_YES
     }
 }
